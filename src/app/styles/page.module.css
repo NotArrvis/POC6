@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.movieBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid blue;
+	color: blue;
+	padding: 7rem;
+}
