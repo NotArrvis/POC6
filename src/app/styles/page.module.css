@@ -4,11 +4,26 @@
 	align-items: center;
 	height: 100vh;
 }
+
+.contentBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid #f0f0f0;
+	padding: 2rem;
+	color: #f0f0f0;
+	gap: 20px;
+	border-radius: 3rem;
+}
+
 .movieBox {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 2px solid blue;
-	color: blue;
-	padding: 7rem;
+}
+
+.seats {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
