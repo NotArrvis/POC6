@@ -1,23 +1,27 @@
 'use client';
 
 import { useState } from 'react';
-import { useSeats } from './SeatsContext';
 import data from '@/data/data.JSON';
 import styles from '../styles/seats.module.css';
+import Sum from './Sum';
 
-export default function Seats() {
+export default function Seatings() {
 	const seats = data.assentos;
-	const { toggleSeatSelection } = useSeats();
 	const [selectedSeats, setSelectedSeats] = useState([]);
+	const [totalSelected, setTotalSelected] = useState(0);
+	const [totalPrice, setTotalPrice] = useState(0);
 
-	const handleSeatClick = (seat) => {
-		if (seat.disponivel) {
-			toggleSeatSelection(seat);
-			setSelectedSeats((prevSelectedSeats) =>
-				prevSelectedSeats.includes(seat.numero)
-					? prevSelectedSeats.filter((num) => num !== seat.numero)
-					: [...prevSelectedSeats, seat.numero]
+	const toggleSeatSelection = (seat) => {
+		if (selectedSeats.includes(seat.numero)) {
+			setSelectedSeats(
+				selectedSeats.filter((num) => num !== seat.numero)
 			);
+			setTotalSelected(totalSelected - 1);
+			setTotalPrice(totalPrice - seat.preco);
+		} else {
+			setSelectedSeats([...selectedSeats, seat.numero]);
+			setTotalSelected(totalSelected + 1);
+			setTotalPrice(totalPrice + seat.preco);
 		}
 	};
 
@@ -33,7 +37,7 @@ export default function Seats() {
 							? styles.selected
 							: ''
 					}`}
-					onClick={() => handleSeatClick(seat)}
+					onClick={() => seat.disponivel && toggleSeatSelection(seat)}
 				></button>
 			))}
 		</div>

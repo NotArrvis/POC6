@@ -1,5 +1,3 @@
-/* SeatMap.module.css */
-
 .seatContainer {
 	display: grid;
 	grid-template-columns: repeat(10, 30px);

@@ -3,7 +3,7 @@ import styles from '../styles/screen.module.css';
 
 const Screen = () => {
 	return (
-		<main className={styles}>
+		<main className={styles.container}>
 			<p>Tela</p>
 			<div className={styles.screen}></div>
 		</main>
