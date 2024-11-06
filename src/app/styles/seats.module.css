@@ -16,12 +16,20 @@
 	font-size: 12px;
 	border-radius: 3px;
 	cursor: pointer;
+	margin: 2px;
 }
 
 .available {
 	background-color: #f0f0f0;
+	border: none;
 }
 
 .occupied {
 	background-color: #505050;
+	cursor: not-allowed;
+	border: none;
+}
+
+.selected {
+	background-color: #cd4a3e;
 }

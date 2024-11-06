@@ -72,7 +72,7 @@
 		},
 		{
 			"numero": 17,
-			"disponivel": false
+			"disponivel": true
 		},
 		{
 			"numero": 18,
@@ -128,7 +128,7 @@
 		},
 		{
 			"numero": 31,
-			"disponivel": false
+			"disponivel": true
 		},
 		{
 			"numero": 32,
@@ -176,7 +176,7 @@
 		},
 		{
 			"numero": 43,
-			"disponivel": false
+			"disponivel": true
 		},
 		{
 			"numero": 44,
@@ -224,7 +224,7 @@
 		},
 		{
 			"numero": 55,
-			"disponivel": false
+			"disponivel": true
 		},
 		{
 			"numero": 56,
@@ -236,7 +236,7 @@
 		},
 		{
 			"numero": 58,
-			"disponivel": false
+			"disponivel": true
 		},
 		{
 			"numero": 59,
@@ -284,7 +284,7 @@
 		},
 		{
 			"numero": 70,
-			"disponivel": false
+			"disponivel": true
 		},
 		{
 			"numero": 71,
@@ -296,7 +296,7 @@
 		},
 		{
 			"numero": 73,
-			"disponivel": false
+			"disponivel": true
 		},
 		{
 			"numero": 74,
@@ -308,7 +308,7 @@
 		},
 		{
 			"numero": 76,
-			"disponivel": false
+			"disponivel": true
 		},
 		{
 			"numero": 77,
@@ -320,7 +320,7 @@
 		},
 		{
 			"numero": 79,
-			"disponivel": false
+			"disponivel": true
 		},
 		{
 			"numero": 80,

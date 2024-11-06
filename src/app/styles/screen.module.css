@@ -1,0 +1,10 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.screen {
+	background-color: #505050;
+	padding: 0.5rem 10rem 0.5rem 10rem;
+}
