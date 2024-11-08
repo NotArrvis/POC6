@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState } from 'react';
+import data from '@/data/data.JSON';
 
 const SeatsContext = createContext();
 
@@ -10,22 +11,29 @@ export function SeatsProvider({ children }) {
 	const [totalPrice, setTotalPrice] = useState(0);
 
 	const toggleSeatSelection = (seat) => {
+		const seatPrice = data.preco; // Get price from movie data
+
 		if (selectedSeats.includes(seat.numero)) {
 			setSelectedSeats(
 				selectedSeats.filter((num) => num !== seat.numero)
 			);
-			setTotalSelected(totalSelected - 1);
-			setTotalPrice(totalPrice - seat.preco);
+			setTotalSelected((prev) => prev - 1);
+			setTotalPrice((prev) => prev - seatPrice);
 		} else {
-			setSelectedSeats([...selectedSeats, seat.numero]);
-			setTotalSelected(totalSelected + 1);
-			setTotalPrice(totalPrice + seat.preco);
+			setSelectedSeats((prev) => [...prev, seat.numero]);
+			setTotalSelected((prev) => prev + 1);
+			setTotalPrice((prev) => prev + seatPrice);
 		}
 	};
 
 	return (
 		<SeatsContext.Provider
-			value={{ totalSelected, totalPrice, toggleSeatSelection }}
+			value={{
+				selectedSeats,
+				totalSelected,
+				totalPrice,
+				toggleSeatSelection,
+			}}
 		>
 			{children}
 		</SeatsContext.Provider>
@@ -33,5 +41,9 @@ export function SeatsProvider({ children }) {
 }
 
 export function useSeats() {
-	return useContext(SeatsContext);
+	const context = useContext(SeatsContext);
+	if (!context) {
+		throw new Error('useSeats must be used within a SeatsProvider');
+	}
+	return context;
 }

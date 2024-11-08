@@ -6,8 +6,8 @@ const MovieBox = () => {
 	return (
 		<main className={style.container}>
 			<section className={style.minor}>
-				<h1>{data.titulo}</h1>
-				<p className={style.hora}>{data.horario}</p>
+				<h1 className={style.title}>{data.titulo}</h1>
+				<p className={style.hour}>{data.horario}</p>
 			</section>
 		</main>
 	);

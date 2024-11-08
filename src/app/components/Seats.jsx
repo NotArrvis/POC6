@@ -1,29 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useSeats } from './SeatsContext';
 import data from '@/data/data.JSON';
 import styles from '../styles/seats.module.css';
-import Sum from './Sum';
 
-export default function Seatings() {
+export default function Seats() {
 	const seats = data.assentos;
-	const [selectedSeats, setSelectedSeats] = useState([]);
-	const [totalSelected, setTotalSelected] = useState(0);
-	const [totalPrice, setTotalPrice] = useState(0);
-
-	const toggleSeatSelection = (seat) => {
-		if (selectedSeats.includes(seat.numero)) {
-			setSelectedSeats(
-				selectedSeats.filter((num) => num !== seat.numero)
-			);
-			setTotalSelected(totalSelected - 1);
-			setTotalPrice(totalPrice - seat.preco);
-		} else {
-			setSelectedSeats([...selectedSeats, seat.numero]);
-			setTotalSelected(totalSelected + 1);
-			setTotalPrice(totalPrice + seat.preco);
-		}
-	};
+	const { selectedSeats, toggleSeatSelection } = useSeats();
 
 	return (
 		<div className={styles.seatContainer}>
@@ -37,7 +20,9 @@ export default function Seatings() {
 							? styles.selected
 							: ''
 					}`}
-					onClick={() => seat.disponivel && toggleSeatSelection(seat)}
+					onClick={() => {
+						seat.disponivel && toggleSeatSelection(seat);
+					}}
 				></button>
 			))}
 		</div>
