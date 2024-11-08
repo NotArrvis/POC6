@@ -5,9 +5,13 @@
 	align-items: center;
 }
 
-.hora {
+.hour {
 	color: #f0f0f0;
 	margin-bottom: 2rem;
+}
+
+.title {
+	color: #f0f0f0;
 }
 
 .minor {
@@ -15,4 +19,13 @@
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
+}
+
+@media (prefers-color-scheme: light) {
+	.hour {
+		color: #1a1a24;
+	}
+	.title {
+		color: #1a1a24;
+	}
 }

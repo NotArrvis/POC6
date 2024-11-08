@@ -10,8 +10,10 @@ const Sum = () => {
 	return (
 		<div className={styles.container}>
 			<button className={styles.button}>
-				<h3>Comprar ({totalSelected} assentos)</h3>
-				<p>R$ {(totalPrice || 0).toFixed(2)}</p>
+				<h3 className={styles.text}>
+					Comprar ({totalSelected} assentos)
+				</h3>
+				<p className={styles.text}>R$ {(totalPrice || 0).toFixed(2)}</p>
 			</button>
 		</div>
 	);

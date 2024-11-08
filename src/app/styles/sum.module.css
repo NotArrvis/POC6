@@ -8,3 +8,15 @@
 	background-color: #cd4a3e;
 	border: none;
 }
+
+@media (prefers-color-scheme: light) {
+	.button {
+		background-color: #db3d2e;
+	}
+	.container {
+		background-color: #db3d2e;
+	}
+	.text {
+		color: #f0f0f0;
+	}
+}

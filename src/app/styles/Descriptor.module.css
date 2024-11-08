@@ -32,3 +32,20 @@
 	border-radius: 100%;
 	margin-right: 0.5rem;
 }
+
+@media (prefers-color-scheme: light) {
+	.available {
+		background-color: #bababa;
+	}
+	.occupied {
+		background-color: #1a1a24;
+	}
+
+	.selected {
+		background-color: #db3d2e;
+	}
+
+	.text {
+		color: #1a1a24;
+	}
+}

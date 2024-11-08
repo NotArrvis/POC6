@@ -10,7 +10,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #fff;
 	font-size: 12px;
 	border-radius: 3px;
 	cursor: pointer;
@@ -30,4 +29,17 @@
 
 .selected {
 	background-color: #cd4a3e;
+}
+
+@media (prefers-color-scheme: light) {
+	.available {
+		background-color: #bababa;
+	}
+	.occupied {
+		background-color: #1a1a24;
+	}
+
+	.selected {
+		background-color: #db3d2e;
+	}
 }

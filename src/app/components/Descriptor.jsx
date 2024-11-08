@@ -6,15 +6,15 @@ const Descriptor = () => {
 		<main className={styles.container}>
 			<div className={styles.sections}>
 				<p className={styles.available}></p>
-				<p>Livre</p>
+				<p className={styles.text}>Livre</p>
 			</div>
 			<div className={styles.sections}>
 				<p className={styles.selected}></p>
-				<p>selecionado</p>
+				<p className={styles.text}>selecionado</p>
 			</div>
 			<div className={styles.sections}>
 				<p className={styles.occupied}></p>
-				<p>Indisponivel</p>
+				<p className={styles.text}>Indisponivel</p>
 			</div>
 		</main>
 	);

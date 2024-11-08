@@ -6,8 +6,21 @@
 	margin-bottom: 3rem;
 }
 
+.text {
+	color: #505050;
+}
+
 .screen {
 	background-color: #505050;
 	padding: 0.5rem 10rem 0.5rem 10rem;
 	margin-top: 0.25rem;
+}
+
+@media (prefers-color-scheme: light) {
+	.screen {
+		background-color: #6d6969;
+	}
+	.text {
+		color: #6d6969;
+	}
 }

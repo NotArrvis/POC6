@@ -4,7 +4,7 @@ import styles from '../styles/screen.module.css';
 const Screen = () => {
 	return (
 		<main className={styles.container}>
-			<p>Tela</p>
+			<p className={styles.text}>Tela</p>
 			<div className={styles.screen}></div>
 		</main>
 	);
