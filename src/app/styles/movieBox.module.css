@@ -29,3 +29,16 @@
 		color: #1a1a24;
 	}
 }
+
+@media only screen and (min-width: 768px) {
+	.container {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.title,
+	.hour {
+		font-size: 2rem;
+		margin-bottom: 0px;
+		margin-left: 28rem;
+	}
+}

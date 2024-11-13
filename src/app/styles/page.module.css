@@ -34,3 +34,26 @@
 		color: #1a1a24;
 	}
 }
+
+@media only screen and (min-width: 768px) {
+	.contentBox {
+		width: 80rem;
+		max-width: 70rem;
+		height: 50rem;
+		padding: 0.5rem;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.movieBox {
+		justify-content: space-between;
+	}
+	.seats {
+		justify-content: start;
+		align-items: flex-start;
+	}
+
+	.contenContainer {
+		flex-direction: row;
+	}
+}

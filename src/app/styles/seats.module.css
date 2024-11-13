@@ -43,3 +43,27 @@
 		background-color: #db3d2e;
 	}
 }
+.textContainer {
+	display: none;
+}
+
+@media only screen and (min-width: 768px) {
+	.seatContainer {
+		display: grid;
+		grid-template-columns: repeat(10, 30px);
+		gap: 2;
+		justify-content: start;
+	}
+
+	.seat {
+		width: 30px;
+		height: 30px;
+		font-size: 10px;
+		display: flex;
+		justify-content: flex-start;
+		margin: 1px 1px 1px 1px;
+	}
+	.textContainer {
+		display: none;
+	}
+}
