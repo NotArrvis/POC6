@@ -27,17 +27,6 @@ export default function Seats() {
 					></button>
 				))}
 			</div>
-
-			<div className={styles.textContainer}>
-				<h4>Sinopse</h4>
-				<p>{data.sinopse}</p>
-				<p>
-					<strong>Data de Lançamento:</strong> {data.dataLancamento}
-				</p>
-				<p>
-					<strong>Direção:</strong> {data.direcao}
-				</p>
-			</div>
 		</main>
 	);
 }
