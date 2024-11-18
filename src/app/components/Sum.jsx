@@ -9,7 +9,12 @@ const Sum = () => {
 
 	return (
 		<div className={styles.container}>
-			<button className={styles.button}>
+			<button
+				className={styles.button}
+				onClick={() => {
+					alert('Compra realizada com sucesso!');
+				}}
+			>
 				<h3 className={styles.text}>Comprar</h3>
 				<p className={styles.text}>R$ {(totalPrice || 0).toFixed(2)}</p>
 			</button>
