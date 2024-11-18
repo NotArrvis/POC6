@@ -13,7 +13,6 @@
 .screen {
 	background-color: #505050;
 	padding: 0.5rem 10rem 0.5rem 10rem;
-	margin-top: 0.25rem;
 }
 
 @media (prefers-color-scheme: light) {
@@ -25,7 +24,7 @@
 	}
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1010px) {
 	.screen {
 		padding: 1rem 15rem;
 		display: none;

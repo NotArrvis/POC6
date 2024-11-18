@@ -4,6 +4,7 @@ import styles from './styles/page.module.css';
 import Descriptor from './components/Descriptor';
 import Sum from './components/Sum';
 import Screen from './components/Screen';
+import TextBox from './components/TextBox';
 import { SeatsProvider } from './components/SeatsContext';
 
 export default function Home() {
@@ -12,7 +13,14 @@ export default function Home() {
 			<main className={styles.container}>
 				<div className={styles.contentBox}>
 					<MovieBox />
-					<Seats />
+					<div className={styles.contentContainer}>
+						<div className={styles.seats}>
+							<Seats />
+						</div>
+						<div className={styles.textContainer}>
+							<TextBox />
+						</div>
+					</div>
 					<Screen />
 					<Descriptor />
 					<Sum />
