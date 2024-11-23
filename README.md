@@ -1,37 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sistema de Reserva de Assentos
 
-## Getting Started
+Este projeto implementa uma interface para um sistema de reserva de assentos, como em um cinema. A aplicação é construída utilizando React e organiza componentes para exibir informações de filmes, um mapa de assentos, uma tela e um sistema de resumo para cálculo de valores.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Estrutura do Projeto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A estrutura de arquivos do projeto está organizada conforme abaixo:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+src/
+├── components/
+│   ├── MovieBox.jsx
+│   ├── Seats.jsx
+│   ├── SeatsContext.jsx
+│   ├── Sum.jsx
+│   ├── Screen.jsx
+│   ├── Descriptor.jsx
+│   ├── TextBox.jsx
+├── styles/
+│   ├── page.module.css
+│   ├── seats.module.css
+│   ├── sum.module.css
+│   └── ...
+└── data/
+    └── data.JSON
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+- **`components`**: Contém os componentes React utilizados na aplicação.
+- **`styles`**: Inclui os estilos em CSS para os componentes.
+- **`data`**: Contém dados estáticos utilizados na aplicação (ex.: informações de assentos).
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Descrição do Código
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+O código principal (`Home`) é o ponto de entrada para o layout da página. Ele utiliza os seguintes componentes:
 
-## Deploy on Vercel
+1. **`MovieBox`**: Mostra informações sobre o filme em exibição.
+2. **`Seats`**: Renderiza os assentos disponíveis e permite que os usuários selecionem ou desmarquem assentos.
+3. **`SeatsContext`**: Contexto que gerencia o estado dos assentos selecionados, o total de assentos selecionados e o preço total.
+4. **`Sum`**: Exibe o resumo da seleção, incluindo o preço total e um botão de confirmação de compra.
+5. **`Screen`**: Exibe a tela do cinema para visualização do layout.
+6. **`Descriptor`**: Mostra a legenda indicando os tipos de assentos (ex.: disponíveis, ocupados, selecionados).
+7. **`TextBox`**: Fornece informações ou instruções relacionadas à reserva.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# POC6
+### Funcionamento do Código
+
+1. **Provider do Contexto de Assentos**:
+   - O componente `SeatsProvider` é usado para encapsular o estado compartilhado entre os componentes (`SeatsContext`).
+   - Permite gerenciar a lógica de seleção, desmarcar assentos e calcular o preço total.
+
+2. **Layout**:
+   - A estrutura principal utiliza classes CSS de `page.module.css` para organizar o layout.
+   - Componentes como `Seats` e `TextBox` são exibidos lado a lado em `contentContainer`.
+   - A tela do cinema é representada pelo componente `Screen`, enquanto a legenda é gerenciada pelo componente `Descriptor`.
+
+3. **Resumo e Confirmação**:
+   - O componente `Sum` exibe o preço total calculado com base nos assentos selecionados, obtido do `SeatsContext`.
+   - Inclui um botão para finalizar a reserva.
+
+---
+
+## Tecnologias Utilizadas
+
+- **React**: Biblioteca para criação da interface do usuário.
+- **CSS Modules**: Para estilização modular e isolamento de estilos.
+- **Context API**: Para gerenciamento de estado global.
+- **JSON**: Utilizado para carregar dados estáticos como assentos e preços.
+
+---
+
+## Como Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
